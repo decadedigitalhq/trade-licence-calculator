@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade Licence Renewal Fee Calculator Australia — Electrician, Plumber, Builder</title>
+<meta name="description" content="Free calculator for electrician, plumber and builder licence renewal fees in NSW, VIC and QLD. See what you actually owe, sourced from official regulator fee schedules.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Trade Licence Renewal Fee Calculator Australia">
+<meta property="og:description" content="See what your electrician, plumber or builder licence renewal actually costs in NSW, VIC or QLD.">
+<meta property="og:url" content="https://www.tradelicencecalculator.com.au/">
+<meta property="og:site_name" content="Trade Licence Calculator AU">
+<meta property="og:image" content="https://www.tradelicencecalculator.com.au/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.tradelicencecalculator.com.au/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Trade Licence Renewal Fee Calculator",
+  "url": "https://www.tradelicencecalculator.com.au/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any (Web-based)",
+  "description": "Free electrician, plumber and builder licence renewal fee calculator for NSW, VIC and QLD.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD" }
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <a href="index.html" class="logo">
+      <svg width="28" height="28" viewBox="0 0 512 512" aria-hidden="true">
+        <rect width="512" height="512" rx="100" fill="#1b2422"/>
+        <polygon points="256,80 400,140 400,290 256,432 112,290 112,140" fill="#f2f1ec"/>
+        <polygon points="256,120 366,166 366,280 256,388 146,280 146,166" fill="#2c4249"/>
+        <path d="M200 258 L238 296 L322 202" stroke="#e8a33d" stroke-width="26" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Trade Licence <span style="color:var(--amber-deep)">AU</span>
+    </a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="eyebrow">Licence Renewal Lookup · NSW · VIC · QLD</div>
+  <h1>What's your renewal really cost?</h1>
+  <p class="subtitle">Select your state, trade, and renewal length to see your licence renewal fee — sourced directly from official regulator fee schedules, not a guess.</p>
+
+  <div class="calculator">
+    <div class="card-head"><span><span class="dot"></span>Renewal Fee Lookup</span><span>FY2026-27</span></div>
+    <div class="card-body">
+
+      <div class="field">
+        <label for="state">State</label>
+        <select id="state" onchange="updateOptions()">
+          <option value="">Select your state</option>
+          <option value="NSW">New South Wales</option>
+          <option value="VIC">Victoria</option>
+          <option value="QLD">Queensland</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="trade">Trade / licence type</label>
+        <select id="trade" onchange="updateOptions()">
+          <option value="">Select your trade</option>
+          <option value="electrician">Electrician</option>
+          <option value="plumber">Plumber</option>
+          <option value="builder">Builder</option>
+        </select>
+      </div>
+
+      <div class="field" id="yearsField" style="display:none;">
+        <label for="years">Renewal length</label>
+        <select id="years"></select>
+        <div class="hint">Your regulator sets which lengths are available — options update based on your state and trade.</div>
+      </div>
+
+      <button class="calc-btn" onclick="calculateFee()">Check My Renewal Fee</button>
+
+      <div class="result-divider" id="resultDivider"><div class="hazard-stripe"></div></div>
+      <div class="result" id="resultBox">
+        <div id="resultContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>NSW Renewal Fees</h2>
+  <h3>Electrician (contractor licence)</h3>
+  <div class="ledger">
+    <div class="ledger-row"><span class="label">1 year</span><span class="filler"></span><span class="value">$403.00</span></div>
+    <div class="ledger-row"><span class="label">3 years</span><span class="filler"></span><span class="value">$803.00</span></div>
+    <div class="ledger-row"><span class="label">5 years</span><span class="filler"></span><span class="value">$1,235.00</span></div>
+  </div>
+  <h3>Plumber (contractor licence)</h3>
+  <div class="ledger">
+    <div class="ledger-row"><span class="label">1 year</span><span class="filler"></span><span class="value">$388.00</span></div>
+    <div class="ledger-row"><span class="label">3 years</span><span class="filler"></span><span class="value">$959.00</span></div>
+  </div>
+  <h3>Builder (individual contractor licence)</h3>
+  <div class="ledger">
+    <div class="ledger-row"><span class="label">1 year</span><span class="filler"></span><span class="value">$849.00</span></div>
+    <div class="ledger-row"><span class="label">3 years</span><span class="filler"></span><span class="value">$1,590.00</span></div>
+    <div class="ledger-row"><span class="label">5 years</span><span class="filler"></span><span class="value">$2,779.00</span></div>
+  </div>
+  <p class="ledger-note">Source: Building Commission NSW / NSW Fair Trading, 2025-26 &amp; 2026-27 fee schedules.</p>
+
+  <h2>QLD Renewal Fees</h2>
+  <h3>Plumber &amp; drainer (occupational licence, incl. admin fee)</h3>
+  <div class="ledger">
+    <div class="ledger-row"><span class="label">1 year</span><span class="filler"></span><span class="value">$163.90</span></div>
+    <div class="ledger-row"><span class="label">2 years</span><span class="filler"></span><span class="value">$249.55</span></div>
+    <div class="ledger-row"><span class="label">3 years</span><span class="filler"></span><span class="value">$335.21</span></div>
+    <div class="ledger-row"><span class="label">4 years</span><span class="filler"></span><span class="value">$420.91</span></div>
+    <div class="ledger-row"><span class="label">5 years</span><span class="filler"></span><span class="value">$506.62</span></div>
+  </div>
+  <p class="ledger-note">Source: QBCC, effective 1 July 2025 – 30 June 2026. QBCC fees increase annually on 1 July — figures for FY2026-27 may differ slightly.</p>
+
+  <h3>Builder &amp; Electrician (QLD)</h3>
+  <p>QLD builder licence fees scale with your annual turnover (Maximum Revenue tier) rather than a flat rate, starting from approximately <strong>$602.30</strong> for the lowest tier. Electrical licensing in QLD sits across two separate regulators — Electrical Safety Queensland (worker licence) and QBCC (contractor licence) — so there's no single renewal figure. Use the calculator above for a direct link to the right official fee page for your exact situation.</p>
+
+  <h2>VIC Renewal Fees</h2>
+  <p>Victoria's building, plumbing, and electrical renewal fees are calculated using an annually-set "fee unit" multiplied by a rate specific to your licence class, rather than published as flat dollar figures. This means we can't show an exact number here reliably — the calculator above will point you to the correct official fee lookup for your trade.</p>
+
+  <h2>Frequently asked questions</h2>
+
+  <div class="faq-item">
+    <h3>Why don't you have an exact fee for every state and trade?</h3>
+    <p>We only publish figures we can verify directly from official regulator fee schedules. Some states (like Victoria) calculate fees using formulas rather than flat published rates, and some trades (like QLD builders) scale by business turnover. Where we can't verify an exact number, we link you straight to the official source instead of guessing.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Do these fees include GST?</h3>
+    <p>Most Australian government licensing fees are GST-exempt, including the ones listed here. Always confirm on your renewal notice, as this can vary by fee component.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What happens if I miss my renewal deadline?</h3>
+    <p>In every state, working on an expired licence is illegal and can invalidate your insurance. Most regulators charge a restoration fee on top of the normal renewal fee if you're late, and if it's been expired too long (often 3+ months) you may need to reapply from scratch rather than simply restore it.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Can I renew for a shorter or longer period to save money?</h3>
+    <p>Where multi-year options exist (like NSW's 1/3/5-year choices), longer renewal periods work out cheaper per year, but require more money upfront. Weigh that against how settled you are in your current business structure.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Do fees change every year?</h3>
+    <p>Yes. Most regulators (NSW, QLD) increase fees annually on 1 July in line with CPI or legislated schedules. We update this page when new fee schedules are published, but always cross-check your exact renewal notice for the final figure.</p>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> figures on this page are estimates based on published regulator fee schedules at the time of writing and may not reflect the most current rates, discounts, or your specific circumstances (e.g. mutual recognition, reduced fees, penalty surcharges). Always confirm your exact fee with your state's licensing regulator before making a payment.
+  </div>
+
+  <p class="source-note">Sources: <a href="https://www.nsw.gov.au/business-and-economy/licences-and-credentials/building-and-trade-licences-and-registrations" target="_blank" rel="noopener noreferrer">Building Commission NSW</a>, <a href="https://www.qbcc.qld.gov.au/licences/apply-licence/licence-fees" target="_blank" rel="noopener noreferrer">QBCC</a>, <a href="https://www.bpc.vic.gov.au" target="_blank" rel="noopener noreferrer">Building and Plumbing Commission (VIC)</a>.</p>
+</main>
+
+<footer>
+  <div>
+    <a href="about.html">About</a> ·
+    <a href="contact.html">Contact</a> ·
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="terms.html">Terms of Use</a>
+  </div>
+  <p style="margin-top:10px;">© <span id="year"></span> Trade Licence Calculator AU, operated by Nutrino Nexus Pty Ltd. Not affiliated with any state or territory government.</p>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const feeData = {
+  "NSW-electrician": { type: "exact", fees: {1: 403.00, 3: 803.00, 5: 1235.00}, label: "Electrician contractor licence (NSW)" },
+  "NSW-plumber": { type: "exact", fees: {1: 388.00, 3: 959.00}, label: "Plumber contractor licence (NSW)" },
+  "NSW-builder": { type: "exact", fees: {1: 849.00, 3: 1590.00, 5: 2779.00}, label: "Builder contractor licence (NSW)" },
+  "QLD-plumber": { type: "exact", fees: {1: 163.90, 2: 249.55, 3: 335.21, 4: 420.91, 5: 506.62}, label: "Plumber & drainer occupational licence (QLD)" },
+  "QLD-builder": { type: "approx", text: "From approximately $602.30, scaling with your annual turnover (Maximum Revenue tier)", link: "https://www.qbcc.qld.gov.au/licences/apply-licence/licence-fees", label: "Builder licence (QLD)" },
+  "QLD-electrician": { type: "approx", text: "Split across two regulators — Electrical Safety Queensland (worker licence) and QBCC (contractor licence). No single flat renewal figure.", link: "https://www.worksafe.qld.gov.au/licensing-and-registrations/table-of-fees", label: "Electrician licensing (QLD)" },
+  "VIC-electrician": { type: "approx", text: "Calculated per fee unit ($17.27 for FY2026-27) × a rate specific to your licence class. Not published as a flat figure.", link: "https://www.energysafe.vic.gov.au", label: "Electrician licence (VIC)" },
+  "VIC-plumber": { type: "approx", text: "Calculated per fee unit ($17.27 for FY2026-27) × a rate specific to your registration/licence class.", link: "https://www.bpc.vic.gov.au/plumbers/registration-and-licensing/plumber-fees", label: "Plumber registration/licence (VIC)" },
+  "VIC-builder": { type: "approx", text: "Annual fee calculated per fee unit ($17.27 for FY2026-27) × a rate specific to your practitioner category.", link: "https://www.bpc.vic.gov.au/builders/registration/registration-fees", label: "Builder registration (VIC)" }
+};
+
+function updateOptions() {
+  const state = document.getElementById('state').value;
+  const trade = document.getElementById('trade').value;
+  const yearsField = document.getElementById('yearsField');
+  const yearsSelect = document.getElementById('years');
+
+  if (!state || !trade) {
+    yearsField.style.display = 'none';
+    return;
+  }
+
+  const key = state + '-' + trade;
+  const data = feeData[key];
+
+  if (data && data.type === 'exact') {
+    yearsSelect.innerHTML = '';
+    Object.keys(data.fees).forEach(y => {
+      const opt = document.createElement('option');
+      opt.value = y;
+      opt.textContent = y + (y === '1' ? ' year' : ' years');
+      yearsSelect.appendChild(opt);
+    });
+    yearsField.style.display = 'block';
+  } else {
+    yearsField.style.display = 'none';
+  }
+}
+
+function calculateFee() {
+  const state = document.getElementById('state').value;
+  const trade = document.getElementById('trade').value;
+  const years = document.getElementById('years').value;
+  const resultBox = document.getElementById('resultBox');
+  const resultContent = document.getElementById('resultContent');
+  const resultDivider = document.getElementById('resultDivider');
+
+  if (!state || !trade) {
+    resultDivider.className = 'result-divider show';
+    resultBox.className = 'result show';
+    resultContent.innerHTML = '<div class="licence-card"><div class="lc-note">Select a state and trade above to see your renewal fee.</div></div>';
+    return;
+  }
+
+  const key = state + '-' + trade;
+  const data = feeData[key];
+  resultDivider.className = 'result-divider show';
+  resultBox.className = 'result show';
+
+  if (!data) {
+    resultContent.innerHTML = '<div class="licence-card"><div class="lc-note">We don\'t have data for that combination yet.</div></div>';
+    return;
+  }
+
+  if (data.type === 'exact') {
+    const fee = data.fees[years] || Object.values(data.fees)[0];
+    const yearLabel = years || Object.keys(data.fees)[0];
+    resultContent.innerHTML =
+      '<div class="licence-card">' +
+        '<div class="lc-top">' +
+          '<div><div class="lc-label">' + state + ' · ' + trade.toUpperCase() + '</div><div class="lc-meta">' + data.label + '</div></div>' +
+          '<div class="badge-hex">VALID</div>' +
+        '</div>' +
+        '<div class="lc-amount">$' + fee.toLocaleString('en-AU', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</div>' +
+        '<div class="lc-meta">' + yearLabel + '-year renewal</div>' +
+        '<div class="lc-note">Sourced from official regulator fee schedules. Confirm the exact figure on your renewal notice before paying.</div>' +
+      '</div>';
+  } else {
+    resultContent.innerHTML =
+      '<div class="licence-card">' +
+        '<div class="lc-top">' +
+          '<div><div class="lc-label">' + state + ' · ' + trade.toUpperCase() + '</div><div class="lc-meta">' + data.label + '</div></div>' +
+          '<div class="badge-hex">CHECK</div>' +
+        '</div>' +
+        '<div class="lc-amount approx">' + data.text + '</div>' +
+        '<div class="lc-note">This fee isn\'t published as a flat rate. <a href="' + data.link + '" target="_blank" rel="noopener noreferrer">Check the official fee page →</a></div>' +
+      '</div>';
+  }
+}
+</script>
+
+</body>
+</html>

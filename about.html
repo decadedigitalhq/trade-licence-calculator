@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Trade Licence Calculator AU</title>
+<meta name="description" content="About Trade Licence Calculator AU — a free tool to help Australian tradies check their licence renewal fees.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="legal-page">
+
+<header>
+  <div class="inner">
+    <a href="index.html" class="logo">
+      <svg width="28" height="28" viewBox="0 0 512 512" aria-hidden="true">
+        <rect width="512" height="512" rx="100" fill="#1b2422"/>
+        <polygon points="256,80 400,140 400,290 256,432 112,290 112,140" fill="#f2f1ec"/>
+        <polygon points="256,120 366,166 366,280 256,388 146,280 146,166" fill="#2c4249"/>
+        <path d="M200 258 L238 296 L322 202" stroke="#e8a33d" stroke-width="26" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Trade Licence <span style="color:var(--amber-deep)">AU</span>
+    </a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="eyebrow">About this tool</div>
+  <h1>No guesswork on renewal costs.</h1>
+
+  <p>Trade Licence Calculator AU is a free tool built for Australian electricians, plumbers, and builders who want a quick, straight answer on what their licence renewal actually costs — without digging through a state regulator's fee schedule PDF.</p>
+
+  <p>We only publish figures we can verify directly from official sources. Where a fee genuinely isn't published as a flat number — because it's calculated from a formula, or scales with your business turnover — we say so, and link you straight to the right official page instead of guessing.</p>
+
+  <h2>What this site does</h2>
+  <p>Select your state, trade, and renewal length to see either an exact fee (where published) or a clear estimate range with a direct link to your regulator's own fee calculator.</p>
+
+  <h2>What this site doesn't do</h2>
+  <p>This isn't legal or financial advice, and it doesn't replace your official renewal notice. Fees change annually and can include discounts, surcharges, or category-specific variations we can't account for automatically.</p>
+
+  <h2>Our commitment to accuracy</h2>
+  <p>Every figure on this site is sourced from a state regulator (NSW Fair Trading/Building Commission NSW, QBCC, or the Victorian Building and Plumbing Commission) at the time of writing, with the source linked at the bottom of the calculator page. We review these periodically, but regulators update fees annually — always confirm against your actual renewal notice.</p>
+
+  <p>Spotted an outdated figure? <a href="contact.html">Let us know</a>.</p>
+</main>
+
+<footer>
+  <div>
+    <a href="about.html">About</a> ·
+    <a href="contact.html">Contact</a> ·
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="terms.html">Terms of Use</a>
+  </div>
+  <p style="margin-top:10px;">© <span id="year"></span> Trade Licence Calculator AU, operated by Nutrino Nexus Pty Ltd. Not affiliated with any state or territory government.</p>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
