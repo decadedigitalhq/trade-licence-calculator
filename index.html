@@ -4,8 +4,8 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4109746144407141" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trade Licence Renewal Fee Calculator Australia — Electrician, Plumber, Builder</title>
-<meta name="description" content="Free calculator for electrician, plumber and builder licence renewal fees in NSW, VIC and QLD. See what you actually owe, sourced from official regulator fee schedules.">
+<title>Trade Licence Renewal Fees 2026-27 — NSW, VIC, QLD Calculator</title>
+<meta name="description" content="2026-27 renewal fees for electrician, plumber and builder licences in NSW, VIC and QLD, checked against each regulator. Compare terms, late fees and cost per year.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -14,10 +14,11 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="https://tradelicencecalculator.com.au/">
 <link rel="stylesheet" href="styles.css">
+<script src="/analytics.js" defer></script>
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Trade Licence Renewal Fee Calculator Australia">
-<meta property="og:description" content="See what your electrician, plumber or builder licence renewal actually costs in NSW, VIC or QLD.">
+<meta property="og:title" content="Trade Licence Renewal Fees 2026-27 — NSW, VIC, QLD">
+<meta property="og:description" content="What your electrician, plumber or builder licence renewal costs this financial year, checked against each state regulator.">
 <meta property="og:url" content="https://tradelicencecalculator.com.au/">
 <meta property="og:site_name" content="Trade Licence Calculator AU">
 <meta property="og:image" content="https://tradelicencecalculator.com.au/og-image.png">
@@ -34,7 +35,8 @@
   "url": "https://tradelicencecalculator.com.au/",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Any (Web-based)",
-  "description": "Free electrician, plumber and builder licence renewal fee calculator for NSW, VIC and QLD.",
+  "description": "Free 2026-27 renewal fee calculator for electrician, plumber and builder licences in NSW, VIC and QLD.",
+  "dateModified": "2026-11-13",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD" }
 }
 </script>
@@ -45,51 +47,28 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Do I need insurance to hold a trade licence?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "In most states, yes — public liability insurance is either a legal condition of your licence or a practical requirement, since most building sites and principal contractors won't let you start work without a valid Certificate of Currency."
-      }
+      "name": "Is a longer licence term always cheaper per year?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. In NSW for 2026-27 the 3-year term is the cheapest per year for individual contractor licences. A trade or specialist licence costs $299 for 1 year, $715 for 3 years ($238 a year) and $1,231 for 5 years ($246 a year)." }
     },
     {
       "@type": "Question",
-      "name": "Why don't you have an exact fee for every state and trade?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We only publish figures we can verify directly from official regulator fee schedules. Some states calculate fees using formulas rather than flat published rates, and some trades scale by business turnover."
-      }
+      "name": "What does it cost to renew late?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It depends on the state. NSW charges a restoration fee instead of the renewal fee if you lodge within 3 months after expiry ($367 instead of $299 for a 1-year trade or specialist licence). VIC builders pay a $342.80 late fee if they lodge less than 3 months before expiry. QBCC lists a $142.70 restoration fee on top of the renewal fee." }
     },
     {
       "@type": "Question",
       "name": "Do these fees include GST?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most Australian government licensing fees are GST-exempt, including the ones listed here. Always confirm on your renewal notice."
-      }
+      "acceptedAnswer": { "@type": "Answer", "text": "The Building and Plumbing Commission (VIC) states its fees are GST-exempt. Government licence fees in NSW and QLD are also generally charged without GST. Your renewal notice shows the final amount." }
     },
     {
       "@type": "Question",
-      "name": "What happens if I miss my renewal deadline?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Working on an expired licence is illegal in every state and can invalidate your insurance. Most regulators charge a restoration fee on top of the normal renewal fee if you're late."
-      }
+      "name": "When do the fees go up?",
+      "acceptedAnswer": { "@type": "Answer", "text": "On 1 July each year. For 2026-27 Queensland applied a 3.4% indexation rate and Victoria set its fee unit at $17.27, up from $16.81." }
     },
     {
       "@type": "Question",
-      "name": "Can I renew for a shorter or longer period to save money?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Where multi-year options exist, longer renewal periods work out cheaper per year, but require more money upfront."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do fees change every year?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Most regulators increase fees annually on 1 July in line with CPI or legislated schedules."
-      }
+      "name": "Do I need insurance to hold a trade licence?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Victorian building practitioners must show proof of required insurance every year to keep their registration. NSW builders doing residential work over the threshold need Home Building Compensation cover. Even where it is not a licence condition, most builders and principal contractors want a public liability Certificate of Currency before you start." }
     }
   ]
 }
@@ -119,140 +98,157 @@
 </header>
 
 <main>
-  <div class="eyebrow">Licence Renewal Lookup · NSW · VIC · QLD</div>
+  <div class="eyebrow">Licence Renewal Fees · NSW · VIC · QLD · 2026-27</div>
   <h1>What's your renewal really cost?</h1>
-  <p class="subtitle">Select your state, trade, and renewal length to see your licence renewal fee — sourced directly from official regulator fee schedules, not a guess.</p>
+  <p class="subtitle">Pick your state, trade and licence type. You'll get the 2026-27 fee, the cost per year, and what it costs if you're late. Every figure is taken from the regulator's own fee page.</p>
+  <p class="updated">Fees checked against each regulator on 13 November 2026.</p>
 
   <div class="calculator">
     <div class="card-head"><span><span class="dot"></span>Renewal Fee Lookup</span><span>FY2026-27</span></div>
     <div class="card-body">
 
-      <div class="field">
-        <label for="state">State</label>
-        <select id="state" onchange="updateOptions()">
-          <option value="">Select your state</option>
-          <option value="NSW">New South Wales</option>
-          <option value="VIC">Victoria</option>
-          <option value="QLD">Queensland</option>
-        </select>
+      <div class="field-row">
+        <div class="field">
+          <label for="state">State</label>
+          <select id="state">
+            <option value="">Select your state</option>
+            <option value="NSW">New South Wales</option>
+            <option value="VIC">Victoria</option>
+            <option value="QLD">Queensland</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="trade">Trade</label>
+          <select id="trade">
+            <option value="">Select your trade</option>
+            <option value="electrician">Electrician</option>
+            <option value="plumber">Plumber</option>
+            <option value="builder">Builder</option>
+          </select>
+        </div>
       </div>
 
-      <div class="field">
-        <label for="trade">Trade / licence type</label>
-        <select id="trade" onchange="updateOptions()">
-          <option value="">Select your trade</option>
-          <option value="electrician">Electrician</option>
-          <option value="plumber">Plumber</option>
-          <option value="builder">Builder</option>
-        </select>
+      <div class="field" id="optionField" hidden>
+        <label for="option">Licence or registration</label>
+        <select id="option"></select>
       </div>
 
-      <div class="field" id="yearsField" style="display:none;">
-        <label for="years">Renewal length</label>
-        <select id="years"></select>
-        <div class="hint">Your regulator sets which lengths are available — options update based on your state and trade.</div>
+      <div class="field" id="termField" hidden>
+        <label for="term">Renewal term</label>
+        <select id="term"></select>
+        <div class="hint">Only the terms your regulator offers for this licence are listed.</div>
       </div>
 
-      <button class="calc-btn" onclick="calculateFee()">Check My Renewal Fee</button>
+      <button class="calc-btn" id="calcBtn" type="button">Check My Renewal Fee</button>
 
       <div class="result-divider" id="resultDivider"><div class="hazard-stripe"></div></div>
-      <div class="result" id="resultBox">
+      <div class="result" id="resultBox" aria-live="polite">
         <div id="resultContent"></div>
       </div>
     </div>
   </div>
 
-  <h2>NSW Renewal Fees</h2>
-  <h3>Electrician (contractor licence)</h3>
-  <div class="ledger">
-    <div class="ledger-row"><span class="label">1 year</span><span class="filler"></span><span class="value">$403.00</span></div>
-    <div class="ledger-row"><span class="label">3 years</span><span class="filler"></span><span class="value">$803.00</span></div>
-    <div class="ledger-row"><span class="label">5 years</span><span class="filler"></span><span class="value">$1,235.00</span></div>
+  <h2>NSW renewal fees, 2026-27</h2>
+  <p>NSW contractor licences are issued by Building Commission NSW. Electrical, plumbing, draining and gasfitting are "specialist work", so electricians and plumbers renew a <strong>trade or specialist contractor licence</strong>. Builders renew a <strong>building contractor licence</strong>, which costs about twice as much.</p>
+  <div class="table-wrap">
+    <table class="fee-table">
+      <caption>Individual contractor licence renewal, July 2026 – June 2027</caption>
+      <thead><tr><th scope="col">Licence</th><th scope="col">1 year</th><th scope="col">3 years</th><th scope="col">5 years</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Trade or specialist (electrician, plumber)</th><td>$299</td><td>$715</td><td>$1,231</td></tr>
+        <tr><th scope="row">Building contractor</th><td>$592</td><td>$1,422</td><td>$2,475</td></tr>
+        <tr><th scope="row">Qualified supervisor or tradesperson certificate</th><td>$33</td><td>$66</td><td>$113</td></tr>
+      </tbody>
+    </table>
   </div>
-  <h3>Plumber (contractor licence)</h3>
-  <div class="ledger">
-    <div class="ledger-row"><span class="label">1 year</span><span class="filler"></span><span class="value">$388.00</span></div>
-    <div class="ledger-row"><span class="label">3 years</span><span class="filler"></span><span class="value">$959.00</span></div>
-  </div>
-  <h3>Builder (individual contractor licence)</h3>
-  <div class="ledger">
-    <div class="ledger-row"><span class="label">1 year</span><span class="filler"></span><span class="value">$849.00</span></div>
-    <div class="ledger-row"><span class="label">3 years</span><span class="filler"></span><span class="value">$1,590.00</span></div>
-    <div class="ledger-row"><span class="label">5 years</span><span class="filler"></span><span class="value">$2,779.00</span></div>
-  </div>
-  <p class="ledger-note">Source: Building Commission NSW / NSW Fair Trading, 2025-26 &amp; 2026-27 fee schedules. <a href="/nsw-licence-renewal-guide">Read the full NSW renewal guide &rarr;</a></p>
+  <p class="tip"><strong>Worth knowing:</strong> the 3-year term is the cheapest per year in NSW, not the 5-year. A trade licence works out at $238 a year over 3 years and $246 a year over 5. For builders it's $474 a year over 3 years against $495 over 5.</p>
+  <p class="ledger-note">Source: Building Commission NSW, fees for July 2026 – June 2027. Company licences cost more (trade or specialist: $523 / $1,259 / $2,255). <a href="/nsw-licence-renewal-guide">Full NSW renewal guide, including late fees &rarr;</a></p>
 
-  <h2>QLD Renewal Fees</h2>
-  <h3>Plumber &amp; drainer (occupational licence, incl. admin fee)</h3>
-  <div class="ledger">
-    <div class="ledger-row"><span class="label">1 year</span><span class="filler"></span><span class="value">$163.90</span></div>
-    <div class="ledger-row"><span class="label">2 years</span><span class="filler"></span><span class="value">$249.55</span></div>
-    <div class="ledger-row"><span class="label">3 years</span><span class="filler"></span><span class="value">$335.21</span></div>
-    <div class="ledger-row"><span class="label">4 years</span><span class="filler"></span><span class="value">$420.91</span></div>
-    <div class="ledger-row"><span class="label">5 years</span><span class="filler"></span><span class="value">$506.62</span></div>
+  <h2>VIC renewal fees, 2026-27</h2>
+  <p>Victoria has two regulators. Electricians renew with <strong>Energy Safe Victoria</strong>. Plumbers and builders renew with the <strong>Building and Plumbing Commission</strong> (BPC). Both now publish dollar amounts for each year, so you don't need to work anything out from fee units.</p>
+  <div class="table-wrap">
+    <table class="fee-table">
+      <caption>Main Victorian renewal fees, 1 July 2026 – 30 June 2027</caption>
+      <thead><tr><th scope="col">Licence or registration</th><th scope="col">Term</th><th scope="col">Fee</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Electrician's licence (A)</th><td>5 years</td><td>$235.70</td></tr>
+        <tr><th scope="row">Registered Electrical Contractor (REC)</th><td>5 years</td><td>$352.70</td></tr>
+        <tr><th scope="row">Plumbing registration</th><td>3 years</td><td>$416.30</td></tr>
+        <tr><th scope="row">Plumbing licence</th><td>12 months</td><td>$369.00</td></tr>
+        <tr><th scope="row">Domestic builder (unlimited), individual</th><td>Annual fee</td><td>$519.50</td></tr>
+        <tr><th scope="row">Domestic builder (unlimited), individual</th><td>5-yearly renewal</td><td>$1,142.90</td></tr>
+      </tbody>
+    </table>
   </div>
-  <p class="ledger-note">Source: QBCC, effective 1 July 2025 – 30 June 2026. QBCC fees increase annually on 1 July — figures for FY2026-27 may differ slightly. <a href="/qld-licence-renewal-guide">Read the full QLD renewal guide &rarr;</a></p>
+  <p class="ledger-note">Sources: Energy Safe Victoria electrical licensing fees; BPC plumber fees and building practitioner registration fees. <a href="/vic-licence-renewal-guide">Full VIC guide, with every builder category &rarr;</a></p>
 
-  <h3>Builder &amp; Electrician (QLD)</h3>
-  <p>QLD builder licence fees scale with your annual turnover (Maximum Revenue tier) rather than a flat rate, starting from approximately <strong>$602.30</strong> for the lowest tier. Electrical licensing in QLD sits across two separate regulators — Electrical Safety Queensland (worker licence) and QBCC (contractor licence) — so there's no single renewal figure. Use the calculator above for a direct link to the right official fee page for your exact situation.</p>
-
-  <h2>VIC Renewal Fees</h2>
-  <p>Victoria's building, plumbing, and electrical renewal fees are calculated using an annually-set "fee unit" multiplied by a rate specific to your licence class, rather than published as flat dollar figures. This means we can't show an exact number here reliably — the calculator above will point you to the correct official fee lookup for your trade. <a href="/vic-licence-renewal-guide">Read the full VIC renewal guide &rarr;</a></p>
+  <h2>QLD renewal fees, 2026-27</h2>
+  <p>Queensland splits trades across two regulators. Electrical licences sit with the <strong>Electrical Safety Office</strong>. Builders and plumbers renew with the <strong>QBCC</strong>.</p>
+  <div class="table-wrap">
+    <table class="fee-table">
+      <caption>Main Queensland renewal fees</caption>
+      <thead><tr><th scope="col">Licence</th><th scope="col">Term</th><th scope="col">Fee</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Electrical work licence</th><td>Per renewal</td><td>$97.15</td></tr>
+        <tr><th scope="row">Electrical contractor licence</th><td>Per renewal</td><td>$464.30</td></tr>
+        <tr><th scope="row">Plumber &amp; drainer (occupational)</th><td>1 year</td><td>$169.44</td></tr>
+        <tr><th scope="row">Plumber &amp; drainer (occupational)</th><td>5 years</td><td>$523.73</td></tr>
+        <tr><th scope="row">Builder contractor, SC2 (up to $800k a year)</th><td>1 year</td><td>$419.21</td></tr>
+        <tr><th scope="row">Builder contractor, Cat 1-2 (up to $12m)</th><td>1 year</td><td>$501.47</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="ledger-note">Sources: WorkSafe.qld.gov.au table of fees (2026-27, after the 3.4% rise on 1 July 2026); QBCC occupational plumbing and drainage fees; QBCC licence fees. QBCC's contractor fee page is still dated 1 July 2025, so your 2026-27 notice may be slightly higher. <a href="/qld-licence-renewal-guide">Full QLD guide &rarr;</a></p>
 
   <h2>Recommended next steps</h2>
-  <p>Getting your licence sorted is step one. Most tradies setting up or running their business also need a few other things in place — here's what usually comes next.</p>
+  <p>A licence is only one part of running a trade business. These two usually come next.</p>
 
   <div class="ledger">
     <div class="ledger-row">
-      <span class="label">🛡️ Public liability insurance — most sites won't let you start without it</span>
+      <span class="label">🛡️ Public liability insurance: most sites won't let you start without it</span>
       <span class="filler"></span>
-      <span class="value"><a href="https://insure.bizcover.com.au/OccupationSelection?utm_source=DDHQ&utm_medium=Form&utm_campaign=DDHQ" target="_blank" rel="noopener noreferrer sponsored">Compare & Buy Insurance →</a></span>
+      <span class="value"><a href="https://insure.bizcover.com.au/OccupationSelection?utm_source=DDHQ&utm_medium=Form&utm_campaign=DDHQ" target="_blank" rel="sponsored nofollow noopener">BizCover →</a></span>
     </div>
     <div class="ledger-row">
-      <span class="label">🔧 Job management software — quoting, scheduling, and invoicing on-site</span>
+      <span class="label">🔧 Job management software: quotes, scheduling and invoices on site</span>
       <span class="filler"></span>
-      <span class="value"><a href="https://www.tradifyhq.com/mates-rates?referralCode=S6Y2HK" target="_blank" rel="noopener noreferrer sponsored">Tradify →</a></span>
+      <span class="value"><a href="https://www.tradifyhq.com/mates-rates?referralCode=S6Y2HK" target="_blank" rel="sponsored nofollow noopener">Tradify →</a></span>
     </div>
   </div>
-  <p class="ledger-note">These are affiliate links — if you sign up through them, we may earn a small commission at no extra cost to you. We only recommend tools we'd genuinely suggest to a tradie starting out.</p>
+  <p class="ledger-note">These are affiliate links. If you sign up through them we may earn a small commission, at no extra cost to you. It doesn't change any fee shown on this site.</p>
 
   <h2>Frequently asked questions</h2>
 
   <div class="faq-item">
-    <h3>Do I need insurance to hold a trade licence?</h3>
-    <p>In most states, yes — public liability insurance is either a legal condition of your licence or a practical requirement, since most building sites, principal contractors, and councils won't let you start work without a valid Certificate of Currency. Some licence categories (like registered building practitioners in several states) also require Professional Indemnity insurance. Comparison platforms like <a href="https://insure.bizcover.com.au/OccupationSelection?utm_source=DDHQ&utm_medium=Form&utm_campaign=DDHQ" target="_blank" rel="noopener noreferrer sponsored">BizCover</a> let you quote across multiple insurers in one go rather than calling around individually. <img src="bizcover-partners-badge.png" alt="BizCover Partners" style="height:16px; vertical-align:middle; margin-left:4px;"></p>
+    <h3>Is a longer licence term always cheaper per year?</h3>
+    <p>No, and NSW is the clearest example. For 2026-27 a trade or specialist contractor licence costs $299 for 1 year, $715 for 3 years ($238 a year) and $1,231 for 5 years ($246 a year). So the 3-year term is the best value. The 5-year term still saves you two renewal rounds and the risk of forgetting one.</p>
   </div>
 
   <div class="faq-item">
-    <h3>Why don't you have an exact fee for every state and trade?</h3>
-    <p>We only publish figures we can verify directly from official regulator fee schedules. Some states (like Victoria) calculate fees using formulas rather than flat published rates, and some trades (like QLD builders) scale by business turnover. Where we can't verify an exact number, we link you straight to the official source instead of guessing.</p>
+    <h3>What does it cost to renew late?</h3>
+    <p>Each state handles it differently. In <strong>NSW</strong>, if you lodge within 3 months after expiry you pay a restoration fee instead of the renewal fee: $367 rather than $299 for a 1-year trade licence. After that you may need to apply again from scratch. In <strong>VIC</strong>, builders pay a $342.80 late fee if they lodge <em>less than 3 months before</em> expiry, so you can pay a late fee before your registration has even expired. In <strong>QLD</strong>, QBCC lists a $142.70 restoration fee on top of the renewal fee.</p>
   </div>
 
   <div class="faq-item">
     <h3>Do these fees include GST?</h3>
-    <p>Most Australian government licensing fees are GST-exempt, including the ones listed here. Always confirm on your renewal notice, as this can vary by fee component.</p>
+    <p>The BPC says all its fees are GST-exempt. Government licence fees in NSW and QLD are also generally charged without GST. Your renewal notice shows the final figure.</p>
   </div>
 
   <div class="faq-item">
-    <h3>What happens if I miss my renewal deadline?</h3>
-    <p>In every state, working on an expired licence is illegal and can invalidate your insurance. Most regulators charge a restoration fee on top of the normal renewal fee if you're late, and if it's been expired too long (often 3+ months) you may need to reapply from scratch rather than simply restore it.</p>
+    <h3>When do the fees go up?</h3>
+    <p>On 1 July each year. For 2026-27 Queensland applied a 3.4% indexation rate. Victoria's fee unit rose from $16.81 to $17.27. A figure from last year's renewal notice is almost certainly out of date.</p>
   </div>
 
   <div class="faq-item">
-    <h3>Can I renew for a shorter or longer period to save money?</h3>
-    <p>Where multi-year options exist (like NSW's 1/3/5-year choices), longer renewal periods work out cheaper per year, but require more money upfront. Weigh that against how settled you are in your current business structure.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Do fees change every year?</h3>
-    <p>Yes. Most regulators (NSW, QLD) increase fees annually on 1 July in line with CPI or legislated schedules. We update this page when new fee schedules are published, but always cross-check your exact renewal notice for the final figure.</p>
+    <h3>Do I need insurance to hold a trade licence?</h3>
+    <p>Sometimes it's a licence condition. Victorian building practitioners must give the BPC proof of the required insurance every year, or their registration is suspended. NSW builders doing residential work over the threshold need Home Building Compensation cover. Even where it isn't a condition, most builders and principal contractors ask for a public liability Certificate of Currency before you start. <a href="https://insure.bizcover.com.au/OccupationSelection?utm_source=DDHQ&utm_medium=Form&utm_campaign=DDHQ" target="_blank" rel="sponsored nofollow noopener">BizCover</a> lets you compare quotes from several insurers at once. <img src="bizcover-partners-badge.png" alt="BizCover Partners" width="70" height="16" style="height:16px; width:auto; vertical-align:middle; margin-left:4px;"></p>
   </div>
 
   <div class="disclaimer">
-    <strong>Disclaimer:</strong> figures on this page are estimates based on published regulator fee schedules at the time of writing and may not reflect the most current rates, discounts, or your specific circumstances (e.g. mutual recognition, reduced fees, penalty surcharges). Always confirm your exact fee with your state's licensing regulator before making a payment.
+    <strong>Disclaimer:</strong> these are the fees regulators published for 2026-27 when we checked on 13 November 2026. Your fee can differ because of company vs individual licences, extra categories, hardship relief or late fees. Always confirm the amount on your renewal notice before paying. This is general information, not legal or financial advice.
   </div>
 
-  <p class="source-note">Sources: <a href="https://www.nsw.gov.au/business-and-economy/licences-and-credentials/building-and-trade-licences-and-registrations" target="_blank" rel="noopener noreferrer">Building Commission NSW</a>, <a href="https://www.qbcc.qld.gov.au/licences/apply-licence/licence-fees" target="_blank" rel="noopener noreferrer">QBCC</a>, <a href="https://www.bpc.vic.gov.au" target="_blank" rel="noopener noreferrer">Building and Plumbing Commission (VIC)</a>.</p>
+  <p class="source-note">Sources: <a href="https://www.nsw.gov.au/business-and-economy/licences-and-credentials/building-and-trade/fees-for-licences-and-certificates" target="_blank" rel="noopener">Building Commission NSW, fees for licences and certificates</a> · <a href="https://www.energysafe.vic.gov.au/licensing/electrical-licences/fees" target="_blank" rel="noopener">Energy Safe Victoria, electrical licensing fees</a> · <a href="https://www.bpc.vic.gov.au/plumbers/registration-and-licensing/plumber-fees" target="_blank" rel="noopener">BPC plumber fees</a> · <a href="https://www.bpc.vic.gov.au/builders/registration/registration-fees" target="_blank" rel="noopener">BPC builder registration fees</a> · <a href="https://www.qbcc.qld.gov.au/licences/apply-licence/licence-fees" target="_blank" rel="noopener">QBCC licence fees</a> · <a href="https://www.qbcc.qld.gov.au/licences/apply-licence/licence-fees/licence-fees-occupational-plumbing-drainage" target="_blank" rel="noopener">QBCC plumbing and drainage fees</a> · <a href="https://www.worksafe.qld.gov.au/licensing-and-registrations/table-of-fees" target="_blank" rel="noopener">WorkSafe QLD table of fees</a>. All checked 13 November 2026.</p>
 </main>
 
 <footer>
@@ -269,96 +265,135 @@
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const feeData = {
-  "NSW-electrician": { type: "exact", fees: {1: 403.00, 3: 803.00, 5: 1235.00}, label: "Electrician contractor licence (NSW)" },
-  "NSW-plumber": { type: "exact", fees: {1: 388.00, 3: 959.00}, label: "Plumber contractor licence (NSW)" },
-  "NSW-builder": { type: "exact", fees: {1: 849.00, 3: 1590.00, 5: 2779.00}, label: "Builder contractor licence (NSW)" },
-  "QLD-plumber": { type: "exact", fees: {1: 163.90, 2: 249.55, 3: 335.21, 4: 420.91, 5: 506.62}, label: "Plumber & drainer occupational licence (QLD)" },
-  "QLD-builder": { type: "approx", text: "From approximately $602.30, scaling with your annual turnover (Maximum Revenue tier)", link: "https://www.qbcc.qld.gov.au/licences/apply-licence/licence-fees", label: "Builder licence (QLD)" },
-  "QLD-electrician": { type: "approx", text: "Split across two regulators — Electrical Safety Queensland (worker licence) and QBCC (contractor licence). No single flat renewal figure.", link: "https://www.worksafe.qld.gov.au/licensing-and-registrations/table-of-fees", label: "Electrician licensing (QLD)" },
-  "VIC-electrician": { type: "approx", text: "Calculated per fee unit ($17.27 for FY2026-27) × a rate specific to your licence class. Not published as a flat figure.", link: "https://www.energysafe.vic.gov.au", label: "Electrician licence (VIC)" },
-  "VIC-plumber": { type: "approx", text: "Calculated per fee unit ($17.27 for FY2026-27) × a rate specific to your registration/licence class.", link: "https://www.bpc.vic.gov.au/plumbers/registration-and-licensing/plumber-fees", label: "Plumber registration/licence (VIC)" },
-  "VIC-builder": { type: "approx", text: "Annual fee calculated per fee unit ($17.27 for FY2026-27) × a rate specific to your practitioner category.", link: "https://www.bpc.vic.gov.au/builders/registration/registration-fees", label: "Builder registration (VIC)" }
+/* 2026-27 fee data. Every figure checked against the regulator's page on 13 Nov 2026.
+   terms: {label: amount}. perYear: years in the term (for cost-per-year), null if not a fixed term.
+   late: what happens if you renew late. */
+var NSW_SRC = 'https://www.nsw.gov.au/business-and-economy/licences-and-credentials/building-and-trade/fees-for-licences-and-certificates';
+var ESV_SRC = 'https://www.energysafe.vic.gov.au/licensing/electrical-licences/fees';
+var BPC_PL = 'https://www.bpc.vic.gov.au/plumbers/registration-and-licensing/plumber-fees';
+var BPC_BU = 'https://www.bpc.vic.gov.au/builders/registration/registration-fees';
+var QBCC_SRC = 'https://www.qbcc.qld.gov.au/licences/apply-licence/licence-fees';
+var QBCC_PL = 'https://www.qbcc.qld.gov.au/licences/apply-licence/licence-fees/licence-fees-occupational-plumbing-drainage';
+var ESO_SRC = 'https://www.worksafe.qld.gov.au/licensing-and-registrations/table-of-fees';
+
+var NSW_TRADE = [
+  { name: 'Contractor licence (individual)', terms: [['1 year', 299, 1], ['3 years', 715, 3], ['5 years', 1231, 5]], late: 'Lodging within 3 months after expiry? You pay the restoration fee instead: $367 / $785 / $1,388.', src: NSW_SRC, who: 'Building Commission NSW' },
+  { name: 'Contractor licence (company)', terms: [['1 year', 523, 1], ['3 years', 1259, 3], ['5 years', 2255, 5]], late: 'Late renewals are charged a restoration fee. Check the NSW fee page for company amounts.', src: NSW_SRC, who: 'Building Commission NSW' },
+  { name: 'Qualified supervisor certificate', terms: [['1 year', 33, 1], ['3 years', 66, 3], ['5 years', 113, 5]], late: 'Renew before expiry. After 3 months a new application may be needed.', src: NSW_SRC, who: 'Building Commission NSW' },
+  { name: 'Tradesperson certificate', terms: [['1 year', 33, 1], ['3 years', 66, 3], ['5 years', 113, 5]], late: 'Renew before expiry. After 3 months a new application may be needed.', src: NSW_SRC, who: 'Building Commission NSW' }
+];
+
+var FEES = {
+  'NSW-electrician': NSW_TRADE,
+  'NSW-plumber': NSW_TRADE,
+  'NSW-builder': [
+    { name: 'Building contractor licence (individual)', terms: [['1 year', 592, 1], ['3 years', 1422, 3], ['5 years', 2475, 5]], late: 'Lodging within 3 months after expiry? You pay the restoration fee instead: $661 / $1,492 / $2,658.', src: NSW_SRC, who: 'Building Commission NSW' },
+    { name: 'Building contractor licence (company)', terms: [['1 year', 881, 1], ['3 years', 2116, 3], ['5 years', 3651, 5]], late: 'Late renewals are charged a restoration fee. Check the NSW fee page for company amounts.', src: NSW_SRC, who: 'Building Commission NSW' },
+    { name: 'Building qualified supervisor certificate', terms: [['1 year', 33, 1], ['3 years', 66, 3], ['5 years', 113, 5]], late: 'Renew before expiry. After 3 months a new application may be needed.', src: NSW_SRC, who: 'Building Commission NSW' }
+  ],
+  'VIC-electrician': [
+    { name: "Electrician's licence (A)", terms: [['5 years', 235.70, 5]], late: 'If your licence has expired, contact Energy Safe Victoria. A cancelled licence means re-applying at the full fee ($471.50).', src: ESV_SRC, who: 'Energy Safe Victoria' },
+    { name: 'Registered Electrical Contractor (REC)', terms: [['5 years', 352.70, 5]], late: 'If your registration has expired, contact Energy Safe Victoria. Re-applying costs $734.30.', src: ESV_SRC, who: 'Energy Safe Victoria' },
+    { name: "Both: Electrician's licence (A) + REC", terms: [['5 years', 588.40, 5]], late: 'Sole traders often hold both. They may be on different renewal dates.', src: ESV_SRC, who: 'Energy Safe Victoria' }
+  ],
+  'VIC-plumber': [
+    { name: 'Plumbing registration', terms: [['3 years', 416.30, 3]], late: 'Late renewal or reinstatement fee: $91.30.', src: BPC_PL, who: 'Building and Plumbing Commission' },
+    { name: 'Plumbing licence', terms: [['12 months', 369.00, 1]], late: 'Late renewal or reinstatement fee: $91.30.', src: BPC_PL, who: 'Building and Plumbing Commission' },
+    { name: 'Provisional registration', terms: [['1 year', 138.60, 1]], late: 'Late renewal or reinstatement fee: $91.30.', src: BPC_PL, who: 'Building and Plumbing Commission' }
+  ],
+  'VIC-builder': [
+    { name: 'Domestic builder (unlimited), individual', terms: [['Annual fee', 519.50, 1], ['5-yearly renewal', 1142.90, null]], late: 'Lodging less than 3 months before expiry adds a $342.80 late fee.', src: BPC_BU, who: 'Building and Plumbing Commission' },
+    { name: 'Domestic builder (limited), individual', terms: [['Annual fee', 415.50, 1], ['5-yearly renewal', 914.30, null]], late: 'Lodging less than 3 months before expiry adds a $342.80 late fee.', src: BPC_BU, who: 'Building and Plumbing Commission' },
+    { name: 'Commercial builder (unlimited), individual', terms: [['Annual fee', 415.50, 1], ['5-yearly renewal', 914.30, null]], late: 'Lodging less than 3 months before expiry adds a $342.80 late fee.', src: BPC_BU, who: 'Building and Plumbing Commission' },
+    { name: 'Commercial builder (limited), individual', terms: [['Annual fee', 332.30, 1], ['5-yearly renewal', 731.50, null]], late: 'Lodging less than 3 months before expiry adds a $342.80 late fee.', src: BPC_BU, who: 'Building and Plumbing Commission' }
+  ],
+  'QLD-electrician': [
+    { name: 'Electrical work licence', terms: [['Renewal', 97.15, null]], late: 'Renewing an expired licence, or reinstating one, is also $97.15.', src: ESO_SRC, who: 'Electrical Safety Office (WorkSafe QLD)' },
+    { name: 'Electrical contractor licence', terms: [['Renewal', 464.30, null]], late: 'Reinstating an electrical contractor licence is also $464.30.', src: ESO_SRC, who: 'Electrical Safety Office (WorkSafe QLD)' }
+  ],
+  'QLD-plumber': [
+    { name: 'Plumber & drainer, full occupational licence', terms: [['1 year', 169.44, 1], ['2 years', 257.99, 2], ['3 years', 346.53, 3], ['4 years', 435.13, 4], ['5 years', 523.73, 5]], late: 'Includes the $80.90 admin fee (charged once per financial year). Licence restoration is listed by QBCC at $142.70.', src: QBCC_PL, who: 'QBCC' },
+    { name: 'Retiree or RTO employee', terms: [['1 year', 106.90, 1], ['5 years', 210.80, 5]], late: 'Includes the admin fee.', src: QBCC_PL, who: 'QBCC' }
+  ],
+  'QLD-builder': [
+    { name: 'Contractor licence, SC2 (revenue up to $800k)', terms: [['1 year', 419.21, 1], ['3 years', 1068.99, 3]], late: 'QBCC lists a $142.70 restoration fee on top of the renewal fee. Its contractor fee page is dated 1 July 2025, so 2026-27 may be higher.', src: QBCC_SRC, who: 'QBCC' },
+    { name: 'Contractor licence, Cat 1-2 (up to $12m)', terms: [['1 year', 501.47, 1], ['3 years', 1278.70, 3]], late: 'QBCC lists a $142.70 restoration fee on top of the renewal fee. Its contractor fee page is dated 1 July 2025, so 2026-27 may be higher.', src: QBCC_SRC, who: 'QBCC' },
+    { name: 'Contractor licence, Cat 3-7 (over $12m)', terms: [['1 year', 754.35, 1], ['3 years', 1923.83, 3]], late: 'QBCC lists a $142.70 restoration fee on top of the renewal fee. Its contractor fee page is dated 1 July 2025, so 2026-27 may be higher.', src: QBCC_SRC, who: 'QBCC' }
+  ]
 };
 
-function updateOptions() {
-  const state = document.getElementById('state').value;
-  const trade = document.getElementById('trade').value;
-  const yearsField = document.getElementById('yearsField');
-  const yearsSelect = document.getElementById('years');
+var $ = function (id) { return document.getElementById(id); };
+function money(n) { return '$' + n.toLocaleString('en-AU', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
 
-  if (!state || !trade) {
-    yearsField.style.display = 'none';
-    return;
-  }
+function currentOptions() {
+  var s = $('state').value, t = $('trade').value;
+  return (s && t) ? FEES[s + '-' + t] : null;
+}
 
-  const key = state + '-' + trade;
-  const data = feeData[key];
+function fillTerms() {
+  var opts = currentOptions();
+  var o = opts ? opts[$('option').value] : null;
+  $('term').innerHTML = '';
+  if (!o) { $('termField').hidden = true; return; }
+  o.terms.forEach(function (t, i) {
+    var el = document.createElement('option');
+    el.value = i; el.textContent = t[0];
+    $('term').appendChild(el);
+  });
+  $('termField').hidden = o.terms.length < 2;
+}
 
-  if (data && data.type === 'exact') {
-    yearsSelect.innerHTML = '';
-    Object.keys(data.fees).forEach(y => {
-      const opt = document.createElement('option');
-      opt.value = y;
-      opt.textContent = y + (y === '1' ? ' year' : ' years');
-      yearsSelect.appendChild(opt);
-    });
-    yearsField.style.display = 'block';
-  } else {
-    yearsField.style.display = 'none';
-  }
+function fillOptions() {
+  var opts = currentOptions();
+  $('option').innerHTML = '';
+  if (!opts) { $('optionField').hidden = true; $('termField').hidden = true; return; }
+  opts.forEach(function (o, i) {
+    var el = document.createElement('option');
+    el.value = i; el.textContent = o.name;
+    $('option').appendChild(el);
+  });
+  $('optionField').hidden = false;
+  fillTerms();
+}
+
+function bestValue(o) {
+  var fixed = o.terms.filter(function (t) { return t[2]; });
+  if (fixed.length < 2) return '';
+  var best = fixed.reduce(function (a, b) { return (a[1] / a[2]) <= (b[1] / b[2]) ? a : b; });
+  return 'Best value per year: the ' + best[0] + ' term (' + money(best[1] / best[2]) + ' a year).';
 }
 
 function calculateFee() {
-  const state = document.getElementById('state').value;
-  const trade = document.getElementById('trade').value;
-  const years = document.getElementById('years').value;
-  const resultBox = document.getElementById('resultBox');
-  const resultContent = document.getElementById('resultContent');
-  const resultDivider = document.getElementById('resultDivider');
-
-  if (!state || !trade) {
-    resultDivider.className = 'result-divider show';
-    resultBox.className = 'result show';
-    resultContent.innerHTML = '<div class="licence-card"><div class="lc-note">Select a state and trade above to see your renewal fee.</div></div>';
+  var opts = currentOptions();
+  $('resultDivider').className = 'result-divider show';
+  $('resultBox').className = 'result show';
+  if (!opts) {
+    $('resultContent').innerHTML = '<div class="licence-card"><div class="lc-note">Select a state and trade above to see your renewal fee.</div></div>';
     return;
   }
-
-  const key = state + '-' + trade;
-  const data = feeData[key];
-  resultDivider.className = 'result-divider show';
-  resultBox.className = 'result show';
-
-  if (!data) {
-    resultContent.innerHTML = '<div class="licence-card"><div class="lc-note">We don\'t have data for that combination yet.</div></div>';
-    return;
-  }
-
-  if (data.type === 'exact') {
-    const fee = data.fees[years] || Object.values(data.fees)[0];
-    const yearLabel = years || Object.keys(data.fees)[0];
-    resultContent.innerHTML =
-      '<div class="licence-card">' +
-        '<div class="lc-top">' +
-          '<div><div class="lc-label">' + state + ' · ' + trade.toUpperCase() + '</div><div class="lc-meta">' + data.label + '</div></div>' +
-          '<div class="badge-hex">VALID</div>' +
-        '</div>' +
-        '<div class="lc-amount">$' + fee.toLocaleString('en-AU', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</div>' +
-        '<div class="lc-meta">' + yearLabel + '-year renewal</div>' +
-        '<div class="lc-note">Sourced from official regulator fee schedules. Confirm the exact figure on your renewal notice before paying.</div>' +
-      '</div>';
-  } else {
-    resultContent.innerHTML =
-      '<div class="licence-card">' +
-        '<div class="lc-top">' +
-          '<div><div class="lc-label">' + state + ' · ' + trade.toUpperCase() + '</div><div class="lc-meta">' + data.label + '</div></div>' +
-          '<div class="badge-hex">CHECK</div>' +
-        '</div>' +
-        '<div class="lc-amount approx">' + data.text + '</div>' +
-        '<div class="lc-note">This fee isn\'t published as a flat rate. <a href="' + data.link + '" target="_blank" rel="noopener noreferrer">Check the official fee page →</a></div>' +
-      '</div>';
-  }
+  var o = opts[$('option').value] || opts[0];
+  var t = o.terms[$('term').value] || o.terms[0];
+  var perYear = t[2] ? '<div class="lc-meta">' + money(t[1] / t[2]) + ' a year</div>' : '';
+  var tip = bestValue(o);
+  $('resultContent').innerHTML =
+    '<div class="licence-card">' +
+      '<div class="lc-top">' +
+        '<div><div class="lc-label">' + esc($('state').value) + ' · ' + esc($('trade').value.toUpperCase()) + ' · 2026-27</div><div class="lc-meta">' + esc(o.name) + '</div></div>' +
+        '<div class="badge-hex">VALID</div>' +
+      '</div>' +
+      '<div class="lc-amount">' + money(t[1]) + '</div>' +
+      '<div class="lc-meta">' + esc(t[0]) + '</div>' + perYear +
+      (tip ? '<div class="lc-meta">' + esc(tip) + '</div>' : '') +
+      '<div class="lc-note"><strong>If you\'re late:</strong> ' + esc(o.late) + '<br>Renew with: ' + esc(o.who) + '. <a href="' + o.src + '" target="_blank" rel="noopener">Check the official fee page →</a></div>' +
+    '</div>';
+  if (window.tlcTrack) window.tlcTrack('calculate', { state: $('state').value, trade: $('trade').value, option: o.name, term: t[0] });
 }
+
+$('state').addEventListener('change', fillOptions);
+$('trade').addEventListener('change', fillOptions);
+$('option').addEventListener('change', fillTerms);
+$('calcBtn').addEventListener('click', calculateFee);
 </script>
 
 </body>

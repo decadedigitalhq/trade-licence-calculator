@@ -5,7 +5,7 @@
   --paper-raised: #ffffff;
   --ink: #1b2422;
   --ink-soft: #4a5652;
-  --ink-faint: #7d8783;
+  --ink-faint: #5d6864;
   --steel: #46626b;
   --steel-deep: #2c4249;
   --amber: #e8a33d;
@@ -379,7 +379,8 @@ button.calc-btn:active { transform: translateY(1px); }
 .ledger-row .label {
   font-size: 0.94rem;
   color: var(--ink-soft);
-  white-space: nowrap;
+  flex: 0 1 auto;
+  min-width: 0;
 }
 
 .ledger-row .filler {
@@ -404,6 +405,69 @@ button.calc-btn:active { transform: translateY(1px); }
   color: var(--ink-faint);
   margin-top: 10px;
 }
+
+/* ---------- Fee tables, tips, dates (Nov 2026) ---------- */
+
+[hidden] { display: none !important; }
+
+p.updated {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin: -20px 0 24px;
+}
+
+.table-wrap { overflow-x: auto; margin: 18px 0 8px; }
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+}
+
+.fee-table caption {
+  text-align: left;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  padding: 0 0 8px;
+}
+
+.fee-table th, .fee-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.fee-table thead th {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.fee-table tbody th { font-weight: 600; color: var(--ink); }
+.fee-table td { font-family: var(--mono); font-weight: 600; white-space: nowrap; }
+.fee-table tbody tr:last-child th, .fee-table tbody tr:last-child td { border-bottom: none; }
+
+p.tip {
+  background: var(--amber-soft);
+  border-left: 4px solid var(--amber-deep);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.94rem;
+}
+
+ol.steps { padding-left: 1.3em; color: var(--ink-soft); }
+ol.steps li { margin-bottom: 8px; }
+
+.breadcrumb { font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 14px; }
+.breadcrumb a { color: var(--ink-soft); }
 
 /* ---------- FAQ ---------- */
 
