@@ -3,7 +3,7 @@
    Events: calculate (state, trade, option, term), affiliate_click (partner, page), regulator_click (host, page).
    No personal data is sent. */
 (function () {
-  var GA_ID = '';
+  var GA_ID = 'G-QKPGXSH0PH';
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
