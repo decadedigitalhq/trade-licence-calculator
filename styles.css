@@ -469,6 +469,70 @@ ol.steps li { margin-bottom: 8px; }
 .breadcrumb { font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 14px; }
 .breadcrumb a { color: var(--ink-soft); }
 
+/* ---------- Renewal reminder form (Nov 2026) ---------- */
+
+.remind-form {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--amber-deep);
+  border-radius: var(--radius-lg);
+  padding: 22px 22px 18px;
+  margin: 18px 0 8px;
+}
+
+.remind-form .remind-title { margin: 0 0 16px; font-size: 1.4rem; }
+.legal-page .remind-form .remind-title { margin-top: 0; }
+
+.remind-form input[type="email"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  font-size: 0.98rem;
+  font-family: var(--sans);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.remind-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--steel);
+  box-shadow: 0 0 0 3px rgba(70, 98, 107, 0.16);
+}
+
+.remind-form .check {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  margin: 4px 0 16px;
+}
+
+.remind-form .check input { margin-top: 3px; width: 18px; height: 18px; flex-shrink: 0; }
+
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.form-msg { font-size: 0.92rem; margin: 12px 0 0; min-height: 1.2em; }
+.form-msg.ok { color: #24613a; font-weight: 600; }
+.form-msg.err { color: #9a3412; font-weight: 600; }
+
+.notice { padding: 14px 16px; border-radius: var(--radius-sm); font-weight: 600; margin: 0 0 18px; }
+.notice.ok { background: #e3f1e6; color: #1f5631; border: 1px solid #b7d9bf; }
+.notice.err { background: var(--alert-bg); color: var(--alert-ink); border: 1px solid var(--alert-line); }
+
+.remind-cta {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  margin: 30px 0 8px;
+}
+
+.remind-cta p { color: #cddbd6 !important; margin: 0 0 10px !important; }
+.remind-cta strong { color: var(--paper); }
+.remind-cta a { color: var(--amber); font-weight: 700; }
+
 /* ---------- FAQ ---------- */
 
 .faq-item {

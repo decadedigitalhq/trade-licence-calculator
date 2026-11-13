@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Trade Licence Renewal Reminder — NSW, VIC, QLD</title>
+<meta name="description" content="Get a free email 3 months and 1 month before your electrician, plumber or builder licence expires, so you renew on time and avoid late or restoration fees.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://tradelicencecalculator.com.au/reminders">
+<link rel="stylesheet" href="styles.css">
+<script src="/analytics.js" defer></script>
+<script src="/remind.js" defer></script>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Trade Licence Renewal Reminder">
+<meta property="og:description" content="An email 3 months and 1 month before your licence expires. Free, and you can unsubscribe any time.">
+<meta property="og:url" content="https://tradelicencecalculator.com.au/reminders">
+<meta property="og:site_name" content="Trade Licence Calculator AU">
+<meta property="og:image" content="https://tradelicencecalculator.com.au/og-image.png">
+</head>
+<body class="legal-page">
+
+<header>
+  <div class="inner">
+    <a href="/" class="logo">
+      <svg width="28" height="28" viewBox="0 0 512 512" aria-hidden="true">
+        <rect width="512" height="512" rx="100" fill="#ff6a00"/>
+        <polygon points="256,80 400,140 400,290 256,432 112,290 112,140" fill="#f2f1ec"/>
+        <polygon points="256,120 366,166 366,280 256,388 146,280 146,166" fill="#2c4249"/>
+        <path d="M200 258 L238 296 L322 202" stroke="#e8a33d" stroke-width="26" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Trade Licence <span style="color:var(--amber-deep)">AU</span>
+    </a>
+    <nav>
+      <a href="/about">About</a>
+      <a href="/guides">Guides</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="eyebrow">Free renewal reminder</div>
+  <h1>Never miss a licence renewal</h1>
+  <p class="subtitle">Tell us when your licence expires. We'll email you 3 months before and again 1 month before, with this year's fee and how to renew.</p>
+
+  <div class="notice" id="statusNotice" hidden></div>
+
+  <form class="remind-form" action="/api/remind" method="post" novalidate>
+    <h2 class="remind-title">Set up my reminder</h2>
+    <div class="field-row">
+      <div class="field">
+        <label for="r-state">State</label>
+        <select id="r-state" name="state" required>
+          <option value="">Select</option>
+          <option value="NSW">New South Wales</option>
+          <option value="VIC">Victoria</option>
+          <option value="QLD">Queensland</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="r-trade">Trade</label>
+        <select id="r-trade" name="trade" required>
+          <option value="">Select</option>
+          <option value="electrician">Electrician</option>
+          <option value="plumber">Plumber</option>
+          <option value="builder">Builder</option>
+        </select>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="r-month">Licence expires (month)</label>
+        <select id="r-month" required>
+          <option value="">Month</option>
+          <option value="01">January</option><option value="02">February</option><option value="03">March</option>
+          <option value="04">April</option><option value="05">May</option><option value="06">June</option>
+          <option value="07">July</option><option value="08">August</option><option value="09">September</option>
+          <option value="10">October</option><option value="11">November</option><option value="12">December</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="r-year">Year</label>
+        <select id="r-year" required>
+          <option value="">Year</option>
+        </select>
+      </div>
+    </div>
+    <input type="hidden" name="expiry" value="">
+    <div class="field">
+      <label for="r-email">Email</label>
+      <input id="r-email" name="email" type="email" autocomplete="email" required>
+    </div>
+    <div class="hp" aria-hidden="true">
+      <label for="r-fax">Leave this empty</label>
+      <input id="r-fax" name="fax_number" type="text" tabindex="-1" autocomplete="off">
+    </div>
+    <label class="check">
+      <input type="checkbox" name="consent" value="yes" required>
+      <span>Email me licence renewal reminders. Each reminder may include one clearly marked partner offer, such as an insurance comparison. I can unsubscribe any time.</span>
+    </label>
+    <button class="calc-btn" type="submit">Remind me</button>
+    <p class="form-msg" role="status" aria-live="polite"></p>
+  </form>
+
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><strong>Pick your state, trade and expiry month.</strong> You'll find the expiry date on your licence card or your regulator's online account.</li>
+    <li><strong>Confirm your email.</strong> We send one email with a link. Nothing else is sent until you click it.</li>
+    <li><strong>Get two reminders:</strong> 3 months before expiry, then 1 month before. Each one has this year's fee, the best-value term and a link to the renewal guide for your state.</li>
+    <li><strong>We delete your details</strong> after your expiry month. Sign up again for your next renewal.</li>
+  </ol>
+
+  <h2>Why 3 months?</h2>
+  <p>It's the window that matters in all three states. Victorian builders who lodge their renewal <a href="/vic-licence-renewal-guide">less than 3 months before expiry</a> pay a $342.80 late fee. In NSW, if you're late, the <a href="/nsw-licence-renewal-guide">restoration fee</a> only applies for 3 months after expiry; after that you may have to apply again. And Energy Safe Victoria opens the online renewal 3 months before your expiry date.</p>
+
+  <h2>What we keep</h2>
+  <p>Only your email, state, trade and the month your licence expires. No name, no licence number. Your details are used for these reminders and nothing else, never sold, and deleted after your expiry month or as soon as you unsubscribe. See our <a href="/privacy">privacy policy</a>.</p>
+
+  <p class="source-note">Want the figure now? Use the <a href="/">renewal fee calculator</a>.</p>
+</main>
+
+<footer>
+  <div>
+    <a href="/about">About</a> ·
+    <a href="/guides">Guides</a> ·
+    <a href="/reminders">Reminders</a> ·
+    <a href="/contact">Contact</a> ·
+    <a href="/privacy">Privacy Policy</a> ·
+    <a href="/terms">Terms of Use</a>
+  </div>
+  <p style="margin-top:10px;">© <span id="year"></span> Trade Licence Calculator AU, operated by Decade Digital HQ. Not affiliated with any state or territory government.</p>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

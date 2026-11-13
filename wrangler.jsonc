@@ -2,14 +2,31 @@
   // Same settings Cloudflare auto-generated on each build, plus not_found_handling
   // so unknown URLs get 404.html (with a 404 status) instead of a blank page.
   // Added 11 Nov 2026 (Dex).
+  // 13 Nov 2026 (Dex): worker.js for the renewal reminder list. It only runs for /api/*
+  // and the daily cron (22:00 UTC = 9am Melbourne in summer, 8am in winter).
+  // Everything else is served straight from the static files.
+  // SMTP2GO_API_KEY is a Secret set in the Cloudflare dashboard, not here.
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "trade-licence-calculator",
+  "main": "worker.js",
   "compatibility_date": "2026-09-26",
   "observability": {
     "enabled": true
   },
   "assets": {
     "directory": ".",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  "kv_namespaces": [
+    { "binding": "REMINDERS", "id": "3e7d6300e1ca4e4ebb86f1f6db7e2052" }
+  ],
+  "vars": {
+    "MAIL_FROM": "Trade Licence Calculator AU <info@tradelicencecalculator.com.au>",
+    "SITE_URL": "https://tradelicencecalculator.com.au"
+  },
+  "triggers": {
+    "crons": ["0 22 * * *"]
   }
 }

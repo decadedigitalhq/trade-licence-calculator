@@ -15,6 +15,7 @@
 <link rel="canonical" href="https://tradelicencecalculator.com.au/">
 <link rel="stylesheet" href="styles.css">
 <script src="/analytics.js" defer></script>
+<script src="/remind.js" defer></script>
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Trade Licence Renewal Fees 2026-27 — NSW, VIC, QLD">
@@ -200,6 +201,64 @@
   </div>
   <p class="ledger-note">Sources: WorkSafe.qld.gov.au table of fees (2026-27, after the 3.4% rise on 1 July 2026); QBCC occupational plumbing and drainage fees; QBCC licence fees. QBCC's contractor fee page is still dated 1 July 2025, so your 2026-27 notice may be slightly higher. <a href="/qld-licence-renewal-guide">Full QLD guide &rarr;</a></p>
 
+  <h2>Get a reminder before it expires</h2>
+  <p>Free: one email 3 months before your licence expires and one a month before, with that year's fee. We delete your details after your expiry month. <a href="/reminders">How it works</a>.</p>
+  <form class="remind-form" action="/api/remind" method="post" novalidate>
+    <div class="field-row">
+      <div class="field">
+        <label for="h-state">State</label>
+        <select id="h-state" name="state" required>
+          <option value="">Select</option>
+          <option value="NSW">New South Wales</option>
+          <option value="VIC">Victoria</option>
+          <option value="QLD">Queensland</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="h-trade">Trade</label>
+        <select id="h-trade" name="trade" required>
+          <option value="">Select</option>
+          <option value="electrician">Electrician</option>
+          <option value="plumber">Plumber</option>
+          <option value="builder">Builder</option>
+        </select>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="h-month">Licence expires (month)</label>
+        <select id="h-month" required>
+          <option value="">Month</option>
+          <option value="01">January</option><option value="02">February</option><option value="03">March</option>
+          <option value="04">April</option><option value="05">May</option><option value="06">June</option>
+          <option value="07">July</option><option value="08">August</option><option value="09">September</option>
+          <option value="10">October</option><option value="11">November</option><option value="12">December</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="h-year">Year</label>
+        <select id="h-year" required>
+          <option value="">Year</option>
+        </select>
+      </div>
+    </div>
+    <input type="hidden" name="expiry" value="">
+    <div class="field">
+      <label for="h-email">Email</label>
+      <input id="h-email" name="email" type="email" autocomplete="email" required>
+    </div>
+    <div class="hp" aria-hidden="true">
+      <label for="h-fax">Leave this empty</label>
+      <input id="h-fax" name="fax_number" type="text" tabindex="-1" autocomplete="off">
+    </div>
+    <label class="check">
+      <input type="checkbox" name="consent" value="yes" required>
+      <span>Email me licence renewal reminders. Each reminder may include one clearly marked partner offer, such as an insurance comparison. I can unsubscribe any time.</span>
+    </label>
+    <button class="calc-btn" type="submit">Remind me</button>
+    <p class="form-msg" role="status" aria-live="polite"></p>
+  </form>
+
   <h2>Recommended next steps</h2>
   <p>A licence is only one part of running a trade business. These two usually come next.</p>
 
@@ -255,6 +314,7 @@
   <div>
     <a href="/about">About</a> ·
     <a href="/guides">Guides</a> ·
+    <a href="/reminders">Reminders</a> ·
     <a href="/contact">Contact</a> ·
     <a href="/privacy">Privacy Policy</a> ·
     <a href="/terms">Terms of Use</a>
@@ -394,6 +454,17 @@ $('state').addEventListener('change', fillOptions);
 $('trade').addEventListener('change', fillOptions);
 $('option').addEventListener('change', fillTerms);
 $('calcBtn').addEventListener('click', calculateFee);
+
+// Links like /?state=NSW&trade=electrician (used in reminder emails) open the calculator pre-filled.
+(function () {
+  var q = new URLSearchParams(location.search);
+  var s = q.get('state'), t = q.get('trade');
+  if (s && t && FEES[s + '-' + t]) {
+    $('state').value = s; $('trade').value = t;
+    fillOptions();
+    calculateFee();
+  }
+})();
 </script>
 
 </body>
