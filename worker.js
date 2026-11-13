@@ -13,9 +13,9 @@
 // Stored value: { email, state, trade, expiry, created, sent3, sent1 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-const STATES = { NSW: 'NSW', VIC: 'VIC', QLD: 'QLD' };
+const STATES = { NSW: 'NSW', VIC: 'VIC', QLD: 'QLD', WA: 'WA', SA: 'SA' };
 const TRADES = { electrician: 'Electrician', plumber: 'Plumber', builder: 'Builder' };
-const GUIDE = { NSW: '/nsw-licence-renewal-guide', VIC: '/vic-licence-renewal-guide', QLD: '/qld-licence-renewal-guide' };
+const GUIDE = { NSW: '/nsw-licence-renewal-guide', VIC: '/vic-licence-renewal-guide', QLD: '/qld-licence-renewal-guide', WA: '/wa-licence-renewal-guide', SA: '/sa-licence-renewal-guide' };
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const BIZCOVER = 'https://insure.bizcover.com.au/OccupationSelection?utm_source=DDHQ&utm_medium=Form&utm_campaign=DDHQ';
 
@@ -78,7 +78,13 @@ export function reminderEmail(env, rec, key, which) {
     VIC: rec.trade === 'builder'
       ? 'In Victoria, builders who lodge less than 3 months before expiry pay a late fee, so now is the time.'
       : 'In Victoria, a lapsed licence can mean re-applying at the full fee, which costs far more than renewing.',
-    QLD: 'In Queensland, QBCC charges a restoration fee if your licence lapses, and working while it has lapsed is unlicensed work.'
+    QLD: 'In Queensland, QBCC charges a restoration fee if your licence lapses, and working while it has lapsed is unlicensed work.',
+    WA: {
+      builder: 'In WA, a late lodgement fee may apply to builder registrations, so lodge before the expiry date.',
+      electrician: 'In WA, an expired electrical licence is restored at the new-application price, which costs more than renewing on time.',
+      plumber: "In WA, a lapsed plumbing licence means you can't legally do plumbing work until it's sorted, so renew before the expiry date."
+    }[rec.trade],
+    SA: 'In South Australia, contractor licences renew every year. Working while your licence has lapsed is unlicensed work, so renew before the expiry date.'
   }[rec.state];
   return {
     subject: (which === 3 ? 'Your licence renewal is due in 3 months' : 'Reminder: your licence expires next month') + ' (' + niceMonth(rec.expiry) + ')',
